@@ -1,11 +1,14 @@
+String name = "Souma";
+int score = 145;
+
 void setup() {
-    size(400, 400);
-    background(255);
-    fill(0);
-    textSize(20);
-    text("Hello, World!", 100, 200);
+    size(400, 400); // ウィンドウサイズ例
+    url += "?name=" + name + "&score=" + score;
+    String[] response = loadStrings(url);
+    println("送信完了");
 }
 
 void draw() {
-    // No need to continuously draw, so we can leave this empty
+    background(220);
+    text(name + ": " + score, 20, 40);
 }
